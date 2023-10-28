@@ -6,7 +6,9 @@ import { Provider } from 'react-redux'
 import { store } from './app/store.jsx'
 import { fetchUsers } from './features/users/usersSlice.jsx'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-store.dispatch(fetchUsers())
+import { fetchPosts } from './features/posts/postsSlice.jsx'
+store.dispatch(fetchPosts());
+store.dispatch(fetchUsers());
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
